@@ -21,10 +21,18 @@
 
 	<properties>
 		<artifact.packaging>war</artifact.packaging>
+		<asio-abstractions.version>1.1.1</asio-abstractions.version>
 	</properties>
 
 	<dependencies>
 		<!-- Dependencies -->
+		
+		<dependency>
+			<groupId>es.um.asio</groupId>
+			<artifactId>asio-abstractions</artifactId>
+			<version>${asio-abstractions.version}</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>de.siegmar</groupId>
 			<artifactId>logback-gelf</artifactId>
