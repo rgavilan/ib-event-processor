@@ -13,7 +13,6 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
-import org.springframework.ui.Model;
 
 import es.um.asio.abstractions.domain.ManagementBusEvent;
 
@@ -37,7 +36,7 @@ public class KafkaConfig {
      *
      * @return the consumer factory
      */
-    public ConsumerFactory<String, ManagementBusEvent<Model>> managementBusConsumerFactory() {
+    public ConsumerFactory<String, ManagementBusEvent> managementBusConsumerFactory() {
     	return new DefaultKafkaConsumerFactory<>(this.getKafkaConfiguration());
     }
     
@@ -48,8 +47,8 @@ public class KafkaConfig {
      * @return the concurrent kafka listener container factory
      */
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, ManagementBusEvent<Model>> managementBusKafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, ManagementBusEvent<Model>> factory = new ConcurrentKafkaListenerContainerFactory<>();
+    public ConcurrentKafkaListenerContainerFactory<String, ManagementBusEvent> managementBusKafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, ManagementBusEvent> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(this.managementBusConsumerFactory());
         return factory;
     }
