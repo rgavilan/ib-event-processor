@@ -33,6 +33,6 @@ public class ManagementListener {
             this.logger.debug("Received message: {}", message);
         }
 
-        // this.messageService.process(message);
+        this.messageService.process(message);
     }
 }

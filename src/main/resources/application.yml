@@ -5,7 +5,7 @@ app:
     create-topics: false
   microservices:
     storage-adapter:
-      base-url: http://localhost:8084
+      base-url: http://localhost:8080
       messages-endpoint: ${app.microservices.storage-adapter.base-url}/message
 
 # Spring configuration
