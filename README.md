@@ -53,4 +53,4 @@ Será preciso configurar las siguientes variables de entorno cuando se instale e
 | `SPRING_KAFKA_BOOTSTRAP_SERVERS` | URL del servicio de Kafka para los productores | localhost:29092 |
 | `SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS` | URL del servicio de Kafka para los consumidores | localhost:29092 |
 | `SPRING_KAFKA_CONSUMER_GROUP_ID` | ID del grupo de consumidores | event-processor |
-|`APP_MICROSERVICES_STORAGE_ADAPTER_BASE_URL`|URL base del Storage Adapter | http://localhost:8084 |
+|`APP_MICROSERVICES_STORAGE_ADAPTER_BASE_URL`|URL base del Storage Adapter | http://localhost:9324 |
