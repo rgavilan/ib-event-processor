@@ -1,5 +1,7 @@
 package es.um.asio.eventprocessor.service;
 
+import es.um.asio.abstractions.domain.ManagementBusEvent;
+
 /**
  * Service to handle message entity related operations
  */
@@ -10,5 +12,5 @@ public interface MessageService {
      * @param message
      *            The message
      */
-    void process(final String message);
+    void process(ManagementBusEvent message);
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import es.um.asio.abstractions.domain.ManagementBusEvent;
 import es.um.asio.eventprocessor.service.MessageService;
 
 /**
@@ -34,7 +35,7 @@ public class MessageServiceImpl implements MessageService {
      * {@inheritDoc}
      */
     @Override
-    public void process(final String message) {
+    public void process(final ManagementBusEvent message) {
         if (this.logger.isDebugEnabled()) {
             this.logger.debug("Insert new message: {}", message);
         }

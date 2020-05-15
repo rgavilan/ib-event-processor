@@ -1,5 +1,7 @@
 package es.um.asio.eventprocessor.config;
 
+import java.time.Duration;
+
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +22,9 @@ public class RestConfig {
     @Bean
     public RestTemplate restTemplate(final RestTemplateBuilder builder) {
         // Do any additional configuration here
-        return builder.build();
+        return builder
+        		.setConnectTimeout(Duration.ofMillis(30000)) // 30 seconds
+                .setReadTimeout(Duration.ofMillis(30000)) // 30 seconds
+        		.build();
     }
 }
