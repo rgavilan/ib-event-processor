@@ -16,7 +16,7 @@
 	<description>UM - ASIO - event-processor</description>
 
 	<scm>
-		<url>https://git.izertis.com/universidaddemurcia/semantmurc/event-processor</url>
+		<url>scm:git:https://github.com/HerculesCRUE/ib-event-processor.git</url>
 	</scm>
 
 	<properties>
