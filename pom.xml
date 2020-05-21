@@ -10,7 +10,6 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath />
 	</parent>
-	>
 
 	<groupId>es.um.asio</groupId>
 	<artifactId>event-processor</artifactId>
@@ -57,8 +56,6 @@
 
 		<artifact.packaging>war</artifact.packaging>
 		<asio-abstractions.version>1.0-SNAPSHOT</asio-abstractions.version>
-
-		<izertis.libraries.version>1.1.1</izertis.libraries.version>
 	</properties>
 
 	<dependencyManagement>
