@@ -87,3 +87,4 @@ Se incluyen los resultados del testing y cobertura en los siguientes enlaces:
 
 * [Compilación](docs/build.md)
 * [Generación Docker](docs/docker.md)
+* [Testing](docs/testing.md)
