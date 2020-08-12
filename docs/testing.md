@@ -25,7 +25,7 @@ Una vez instalado el plugin y configuradas las dependencias de maven, para ejecu
 mvn test
 ```
 
-## Tests
+## Escenarios
 
 A continuación se describen los escenarios probados, utilizando el framework [Cucumber](https://cucumber.io/docs/cucumber/)
 
