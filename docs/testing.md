@@ -29,6 +29,6 @@ mvn test
 
 A continuación se describen los escenarios probados, utilizando el framework [Cucumber](https://cucumber.io/docs/cucumber/)
 
-| Feature                                                            | Descripción                                                                                                                                      |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`messages.feature`](src/test/java/demo/greeting/greeting.feature) | Pruebas sobre la recepción de mensajes procedentes de la cola kafka _management-data_ y posterior envío al controller del _triple-store-adapter_ |
+| Feature                                                            | Descripción                                                                                                                                          |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`messages.feature`](src/test/java/demo/greeting/greeting.feature) | Pruebas sobre la recepción de mensajes procedentes de la cola kafka **management-data** y posterior envío al controller del **triple-store-adapter** |
