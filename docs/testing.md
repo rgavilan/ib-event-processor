@@ -58,17 +58,38 @@ proyecto
       features
         (ficheros del tipo *.feature)
       java
-        es
-          um
-            asio
-              runners
-                (ficheros del tipo *Runner.java)
-                stepdefs
-                  (ficheros del tipo *StepDefinitions.java)
+        ..
+          runners
+            (ficheros del tipo *Runner.java)
+            stepdefs
+              (ficheros del tipo *StepDefinitions.java)
 ```
 
 Ejemplo:
+
 <img src="img/folderStructure.png"/>
+
+### Implementación de las pruebas
+
+### Runners
+
+Se precisa al menos definir como mínimo un Runner para ejecutar las pruebas. Dentro de la anotación `@CucumberOptions` es necesario definir los siguientes parámetros obligatorios:
+
+- **features**: Ruta donde se encuentran definidos los escenarios a probar.
+- **glue**: Hubicación del código que implementa los escenarios definidos en features
+
+Ejemplo:
+
+```java
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		plugin = {"pretty", "html:target/cucumber", "summary"},
+		features = {"src/test/features"},
+		glue = {"es.um.asio.eventprocessor.runners.stepdefs"}
+		)
+public class EventProcessorRunner {
+}
+```
 
 ## Escenarios
 
