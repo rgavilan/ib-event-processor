@@ -6,7 +6,7 @@
 
 Se precisa instalar el [plugin cucumber](http://cucumber.github.com/cucumber-eclipse/update-site) para eclipse.
 
-<img src="img/pluginCucumber.png" height="350px" style="display:block; margin-left: auto; margin-right:auto; width:90%;"/>
+<img src="img/pluginCucumber.png"/>
 
 ### Dependencias de Maven
 
@@ -68,12 +68,12 @@ proyecto
 ```
 
 Ejemplo:
-<img src="img/estructura-carpetas.png" style="display:block; margin-left: auto; margin-right:auto; width:50%;"/>
+<img src="img/folderStructure.png"/>
 
 ## Escenarios
 
 A continuación se describen los escenarios probados, utilizando el framework [Cucumber](https://cucumber.io/docs/cucumber/)
 
-| Feature                                                            | Descripción                                                                                                                                          |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`messages.feature`](src/test/java/demo/greeting/greeting.feature) | Pruebas sobre la recepción de mensajes procedentes de la cola kafka **management-data** y posterior envío al controller del **triple-store-adapter** |
+| Feature                                                     | Descripción                                                                                                                                          |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`messages.feature`](../src/test/features/messages.feature) | Pruebas sobre la recepción de mensajes procedentes de la cola kafka **management-data** y posterior envío al controller del **triple-store-adapter** |
