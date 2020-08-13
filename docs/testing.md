@@ -78,6 +78,10 @@ Se precisa al menos definir como mínimo un Runner para ejecutar las pruebas. De
 - **features**: Ruta donde se encuentran definidos los escenarios a probar.
 - **glue**: Hubicación del código que implementa los escenarios definidos en features
 
+Opcional:
+
+- **plugin**: Se define el formato de salida, con el resultados de los tests.
+
 Ejemplo:
 
 ```java
@@ -89,6 +93,35 @@ Ejemplo:
 		)
 public class EventProcessorRunner {
 }
+```
+
+Ejemplo resultado ejecución:
+
+<img src="img/outputResults.png"/>
+
+### Escenarios
+
+Es posible implementar los test usando @SpringBootTest si la aplicación es de tipo backend sin vista, o utilizando selenium para partes web donde se precisa la navegación por parte del usuario.
+
+#### Testing backend
+
+```java
+@CucumberContextConfiguration
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT, classes = {
+		MessageStepDefinitions.MessageServiceConfiguration.class })
+public class MessageStepDefinitions {
+```
+
+<img src="img/sampleImplementation.png"/>
+
+**IMPORTANTE**: A la hora de implementar los tests los parámetros dentro de `@Given` y `@Then` tienen que coincidir con la información descrita dentro del fichero .feature ya que se trata de una expresión regular `. description escenario $`
+
+#### Testing web
+
+```java
+WebElement myAccountLink = driver.findElement(By.className("account_icon"));
+myAccountLink.click();
 ```
 
 ## Escenarios

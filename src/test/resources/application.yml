@@ -1,0 +1,36 @@
+---
+app:
+  kafka:
+    management-topic-name: management-data
+    create-topics: false
+  microservices:
+    storage-adapter:
+      base-url: http://localhost:9324
+      messages-endpoint: ${app.microservices.storage-adapter.base-url}/message
+
+# Spring configuration
+spring:
+  kafka:
+    bootstrap-servers:
+      - localhost:29092
+    consumer:
+      bootstrap-servers:
+        - localhost:29092
+      group-id: event-processor
+
+## Actuator
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: /management
+  server:
+    port: 9321
+
+## In case of configure web endpoints, remove it or change port number
+server:
+  port: 9324
