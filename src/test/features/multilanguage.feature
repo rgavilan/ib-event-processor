@@ -1,7 +1,13 @@
 #Author: amartino@izertis.com
 #Keywords Summary : multilanguage
-Feature: Sent messages between Management-System and Triple-Store-Adapter
+Feature: Generación de RDF en un idioma en concreto a partir de las entidades Proyecto, Universidad, Instituto de investigación, Compañía, Contrato, Grupo de Investigación, Publicación, Tesis, Master Tesis, Artículo, CurriculumVitae
 
-    Scenario: one message is sent by Management-System and the Event-processor catches it sending again for Triple-Store-Adapter
-        Given a new message in managementdata queue
-        Then the Event-processor sends the new message against Triple-Store-Adapter
+    Scenario: the ETL process a Project object and this object is sent to Management-System
+        Given a new message arrives to managementdata queue
+        Then the Management-system creates Project RDF object in Spanish language
+        Examples:
+            | Property          | Value                          |
+            | IDPROYECTO        | 151                            |
+            | NOMBRE            | CIRUGIA VETERINARIA-RADIOLOGIA |
+            | PROYECTOFINALISTA | N                              |
+            | LIMITATIVO        | N                              |
