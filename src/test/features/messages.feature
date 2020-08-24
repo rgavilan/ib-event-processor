@@ -1,4 +1,4 @@
-#Author: amartino@izertis.com
+#Author: Izertis
 #Keywords Summary : event-processor
 Feature: Sent messages between Management-System and Triple-Store-Adapter
 

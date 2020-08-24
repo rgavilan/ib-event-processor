@@ -1,4 +1,4 @@
-#Author: izertis
+#Author: Izertis
 #Keywords Summary : pojo etl
 Feature: Sent messages between Management-System and Triple-Store-Adapter
 

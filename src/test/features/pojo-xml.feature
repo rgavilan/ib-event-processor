@@ -1,4 +1,4 @@
-#Author: izertis
+#Author: Izertis
 #Keywords Summary : pojo-xml
 Feature: Sent messages between Management-System and Triple-Store-Adapter
 
