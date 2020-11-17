@@ -7,6 +7,8 @@ app:
     storage-adapter:
       base-url: http://localhost:9324
       messages-endpoint: ${app.microservices.storage-adapter.base-url}/message
+  activemq:
+    queue-name: management-data  
 
 # Spring configuration
 spring:
@@ -17,6 +19,12 @@ spring:
       bootstrap-servers:
         - localhost:29092
       group-id: event-processor
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://127.0.0.1:61616
+    packages:
+      trusted: org.springframework.remoting.support,java.lang,es.um.asio
 
 ## Actuator
 management:

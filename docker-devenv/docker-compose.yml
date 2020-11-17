@@ -24,6 +24,13 @@ services:
       - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
     depends_on:
       - zookeeper
+  activemq:
+    image: webcenter/activemq:5.14.3
+    ports:
+        - 8161:8161
+        - 61616:61616
+    container_name: activemq
+    restart: always
 
 volumes:
   zookeeper_data:
