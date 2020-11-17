@@ -24,7 +24,8 @@ spring:
     password: admin
     broker-url: tcp://127.0.0.1:61616
     packages:
-      trusted: org.springframework.remoting.support,java.lang,es.um.asio
+      # take care with security problems // spring.activemq.packages.trusted=<package1>,<package2>,<package3>  
+      trust-all: true
 
 ## Actuator
 management:
