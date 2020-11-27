@@ -60,6 +60,10 @@ Será preciso configurar las siguientes variables de entorno cuando se instale e
 | `SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS`    | URL del servicio de Kafka para los consumidores                                                        | localhost:29092       |
 | `SPRING_KAFKA_CONSUMER_GROUP_ID`             | ID del grupo de consumidores                                                                           | event-processor       |
 | `APP_MICROSERVICES_STORAGE_ADAPTER_BASE_URL` | URL base del Storage Adapter                                                                           | http://localhost:9324 |
+| `SPRING_ACTIVEMQ_USER`                       | Username cola JMS                                                                                      | admin                 |
+| `SPRING_ACTIVEMQ_PASSWORD`                   | Password cola JMS                                                                                      | admin                 |
+| `SPRING_ACTIVEMQ_BROKER_URL`                 | URL base de la cola JMS                                                                                | tcp://127.0.0.1:61616 |
+| `SPRING_ACTIVEMQ_PACKAGES_TRUST_ALL`         | Variable que indica los paquetes permitidos en las colas JMS                                           | true                  |
 
 ### Ejecución
 
