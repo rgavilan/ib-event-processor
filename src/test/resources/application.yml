@@ -7,6 +7,8 @@ app:
     storage-adapter:
       base-url: http://localhost:9324
       messages-endpoint: ${app.microservices.storage-adapter.base-url}/message
+  activemq:
+    queue-name: management-data  
 
 # Spring configuration
 spring:
@@ -17,6 +19,13 @@ spring:
       bootstrap-servers:
         - localhost:29092
       group-id: event-processor
+  activemq:
+    user: admin
+    password: admin
+    broker-url: tcp://127.0.0.1:61616
+    packages:
+      # take care with security problems // spring.activemq.packages.trusted=<package1>,<package2>,<package3>  
+      trust-all: true
 
 ## Actuator
 management:
@@ -33,4 +42,4 @@ management:
 
 ## In case of configure web endpoints, remove it or change port number
 server:
-  port: 9324
+  port: ${management.server.port}
