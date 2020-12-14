@@ -17,6 +17,7 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>UM - ASIO - event-processor</name>
 	<description>UM - ASIO - event-processor</description>
+	<url>https://www.um.es/web/hercules/</url>
 
 	<scm>
 		<url>scm:git:https://github.com/HerculesCRUE/ib-event-processor.git</url>
