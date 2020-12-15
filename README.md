@@ -13,6 +13,10 @@
 
 # ASIO - Procesador de eventos
 
+|     | Master |
+| --- | ------ |
+| Quality Gate | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=HerculesCRUE_ib-event-processor&metric=alert_status)](https://sonarcloud.io/dashboard?id=HerculesCRUE_ib-event-processor) |
+
 Procesador de eventos del módulo de procesamiento para el proyecto Backend SGI (ASIO).
 
 ## OnBoarding
