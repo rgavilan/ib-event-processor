@@ -18,8 +18,7 @@ RF3.14<br>RF3.18<br>RF3.2<br>RF3.4	| [`messages.feature`](../src/test/features/m
 
 ## Reporte
 
-* [Cucumber Report](http://herc-iz-front-desa.atica.um.es:8070/event-processor/cucumber-html-reports/overview-features.html)
-
+* [Cucumber Report](http://herc-iz-front-desa.atica.um.es:8070/event-processor/cucumber/overview-features.html)
 
 
 
